@@ -1,0 +1,53 @@
+
+<div class="row">
+  <div class="sidenav col-2 col-s-2">
+    Launch Year
+    <hr />
+    <div>
+      <button
+        class="filter-button"
+        *ngFor="let y of years"
+        [ngClass]="{ 'filter-selected': y === searchFilters?.launch_year }"
+        (click)="onYearChange(y)"
+      >
+        {{ y }}
+      </button>
+    </div>
+
+    <div>
+      Successful Launch
+      <hr />
+      <button
+        class="filter-button"
+        *ngFor="let filter of booleanFilters"
+        [ngClass]="{
+          'filter-selected': filter.id === searchFilters?.launch_success
+        }"
+        (click)="onLaunchChange(filter.id)"
+      >
+        {{ filter.text }}
+      </button>
+    </div>
+
+    <div>
+      Successful Landing
+      <hr />
+      <button
+        class="filter-button"
+        *ngFor="let filter of booleanFilters"
+        [ngClass]="{
+          'filter-selected': filter.id === searchFilters?.land_success
+        }"
+        (click)="onLandingChange(filter.id)"
+      >
+        {{ filter.text }}
+      </button>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="main col-6 col-s-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
