@@ -24,20 +24,17 @@ export class AppComponent {
   constructor(private readonly router: Router) {}
 
   onLaunchChange(value) {
-    console.log('here?', value);
-    this.searchFilters.launch_success = value;
+    this.searchFilters.launch_success= (value === this.searchFilters.launch_success) ?  null : value;
     this.router.navigate(['/results'], { queryParams: this.getQueryParams()});
   }
 
   onLandingChange(value) {
-    console.log('here?', value);
-    this.searchFilters.land_success = value;
+    this.searchFilters.land_success= (value === this.searchFilters.land_success) ?  null : value;
     this.router.navigate(['/results'], { queryParams: this.getQueryParams() });
   }
 
   onYearChange(value) {
-    console.log('year here?', value);
-    this.searchFilters.launch_year = value;
+    this.searchFilters.launch_year= (value === this.searchFilters.launch_year) ?  null : value;
     this.router.navigate(['/results'], { queryParams: this.getQueryParams() });
   }
 
@@ -49,7 +46,6 @@ export class AppComponent {
         obj[property] = this.searchFilters[property];
       }
     }
-    console.log('getquery', obj);
     return obj;
   }
 }
