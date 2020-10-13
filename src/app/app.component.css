@@ -89,9 +89,9 @@
   }
   
   .header {
-    background-color: #9933cc;
     color: #ffffff;
-    padding: 10px;
+    background-color: black;
+    text-align: center;
   }
   
   

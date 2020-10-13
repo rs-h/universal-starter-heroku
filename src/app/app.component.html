@@ -1,57 +1,5 @@
-<!--<div class="row">
-  <div class="sidenav">
-    Launch Year
-    <hr />
-    <div>
-      <button
-        class="filter-button"
-        *ngFor="let y of years"
-        [ngClass]="{ 'filter-selected': y === searchFilters?.launch_year }"
-        (click)="onYearChange(y)"
-      >
-        {{ y }}
-      </button>
-    </div>
-
-    <div>
-      Successful Launch
-      <hr />
-      <button
-        class="filter-button"
-        *ngFor="let filter of booleanFilters"
-        [ngClass]="{
-          'filter-selected': filter.id === searchFilters?.launch_success
-        }"
-        (click)="onLaunchChange(filter.id)"
-      >
-        {{ filter.text }}
-      </button>
-    </div>
-
-    <div>
-      Successful Landing
-      <hr />
-      <button
-        class="filter-button"
-        *ngFor="let filter of booleanFilters"
-        [ngClass]="{
-          'filter-selected': filter.id === searchFilters?.land_success
-        }"
-        (click)="onLandingChange(filter.id)"
-      >
-        {{ filter.text }}
-      </button>
-    </div>
-    <div></div>
-  </div>
-
-  <div class="main">
-    <router-outlet></router-outlet>
-  </div>
-</div>-->
-
 <div class="header">
-  <h1>Chania</h1>
+  <h1>SpaceX Programs</h1>
 </div>
 
 <div class="row">
